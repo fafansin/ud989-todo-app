@@ -49,11 +49,12 @@ var app = app || {};
 			}
 
 			this.$el.html(this.template(this.model.toJSON()));
+			
 			this.$el.toggleClass('completed', this.model.get('completed'));
 			this.toggleVisible();
 			this.$input = this.$('.edit');
 			return this;
-		},
+		}, 
 
 		toggleVisible: function () {
 			this.$el.toggleClass('hidden', this.isHidden());
